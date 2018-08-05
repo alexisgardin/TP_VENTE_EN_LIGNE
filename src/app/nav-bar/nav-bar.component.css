@@ -1,0 +1,10 @@
+
+html, body{
+    background-color: white;
+}
+
+.sideBar {
+    margin: 0px;
+    background-color: gray;
+    min-height: 100vh;
+}
