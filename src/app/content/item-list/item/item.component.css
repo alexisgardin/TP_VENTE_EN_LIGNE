@@ -1,0 +1,14 @@
+.card-img-top{
+    object-fit: cover;
+    height: 333px;
+    width: auto;
+    transition: transform .5s;
+}
+
+.card-img-top:hover{
+    transform: scale(1.5);
+    object-fit: contain;
+    height: 333px;
+    width: auto;
+    z-index: 9999;
+}

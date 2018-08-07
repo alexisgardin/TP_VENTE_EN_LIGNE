@@ -1,0 +1,22 @@
+img{
+    width: auto;
+  object-fit: cover;
+  height: 93vh;
+}
+.titleSlider{
+    padding: 5px 8px;
+    background-color: rgba(136, 135, 135, 0.637)
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { 
+    img{
+        height: 85vh;
+    }
+ }
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    img{
+        height: 75vh;
+    }
+}
