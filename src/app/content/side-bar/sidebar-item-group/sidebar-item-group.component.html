@@ -1,0 +1,7 @@
+  <a (click)="toggleState()" [ngClass]="{'selected': state === 'show'}" aria-expanded="false" class="dropdown-toggle" >
+    <i [ngClass]="faIcon"></i>
+    {{name}}
+  </a>
+  <ul [@state]="state" class="list-unstyled">
+    <ng-content selector="app-sidebar-sub-item"></ng-content>
+  </ul>

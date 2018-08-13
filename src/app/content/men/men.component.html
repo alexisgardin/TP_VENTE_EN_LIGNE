@@ -1,0 +1,28 @@
+<app-side-bar>
+    <app-sidebar-nav>
+      <app-sidebar-item-group (click)='this.itemService.getItemType("M", "haut")' [name]='"Haut"'>
+        <app-sidebar-sub-item (click)='this.itemService.getItemType("M", "haut", "polo")' click-stop-propagation>
+          Polo
+        </app-sidebar-sub-item>
+        <app-sidebar-sub-item (click)='this.itemService.getItemType("M", "haut", "t-shirt")' click-stop-propagation>
+          Manche courtes
+        </app-sidebar-sub-item>
+        <app-sidebar-sub-item (click)='this.itemService.getItemType("M", "haut", "chemise")' click-stop-propagation>
+          Chemise
+        </app-sidebar-sub-item>
+      </app-sidebar-item-group>
+      <app-sidebar-item-group (click)='this.itemService.getItemType("M", "Bas")' [name]='"Pantalon"'>
+          <app-sidebar-sub-item (click)='this.itemService.getItemType("M", "Bas", "short")' click-stop-propagation>
+          Shorts
+        </app-sidebar-sub-item>
+        <app-sidebar-sub-item (click)='this.itemService.getItemType("M", "Bas", "jean")' click-stop-propagation>
+          Jeans
+        </app-sidebar-sub-item>
+      </app-sidebar-item-group>
+    </app-sidebar-nav>
+    <div class="row justify-content-md-center" contentSideBar>
+      <div class="col-sm-12">
+        <app-item-list [items]='this.itemService.items'></app-item-list>
+      </div>
+    </div>
+  </app-side-bar>

@@ -1,4 +1,4 @@
-import { PromotionSlide } from './../../../model/PromotionSlide';
+import { PromotionSlide } from '../../../model/PromotionSlide';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

@@ -6,7 +6,7 @@
 }
 
 .card-img-top:hover{
-    transform: scale(1.5);
+    transform: scale(1.3);
     object-fit: contain;
     height: 333px;
     width: auto;

@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <nav [@reduceState]="reduce" id="sidebar" [ngClass]="{'active' : reduce}">
+        <div (click)='clickReduce()' class="d-flex flex-row" [ngClass]="{'justify-content-between p-3':!reduce, 'justify-content-center':reduce}"
+            class="sidebar-header d-flex">
+            <h5 *ngIf="!reduce">Menu</h5>
+            <i *ngIf="!reduce" class="fas fa-arrow-left"></i>
+            <i *ngIf="reduce" class="fas fa-arrow-right"></i>
+        </div>
+
+<ng-content select="app-sidebar-nav"></ng-content>
+
+    </nav>
+    <div id="content">
+            <ng-content select="[contentSideBar]"></ng-content>
+    </div>
+</div>
+<!-- <li class="active">
+        <a (click)="toggleState()" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-user"></i>
+            Home
+        </a>
+        <ul class="list-unstyled"  [@heroState]="state" id="homeSubmenu">
+            <li>
+                <a href="#">Home 1</a>
+            </li>
+            <li>
+                <a href="#">Home 2</a>
+            </li>
+            <li>
+                <a href="#">Home 3</a>
+            </li>
+        </ul>
+    </li>-->

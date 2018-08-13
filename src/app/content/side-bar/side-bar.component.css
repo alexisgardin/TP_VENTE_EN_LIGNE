@@ -1,0 +1,178 @@
+:host ::ng-deep .wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  height: 100%;
+}
+:host ::ng-deep #content {
+  width: 100%;
+}
+:host ::ng-deep #sidebar {
+  width: 250px;
+}
+/* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+:host ::ng-deep #sidebar.active {
+  text-align: center;
+}
+
+/* Toggling the sidebar header content, hide the big heading [h3] and showing the small heading [strong] and vice versa*/
+:host ::ng-deep #sidebar .sidebar-header strong {
+  display: none;
+}
+:host ::ng-deep #sidebar.active .sidebar-header h3 {
+  display: none;
+}
+:host ::ng-deep #sidebar.active .sidebar-header strong {
+  display: block;
+}
+
+:host ::ng-deep #sidebar ul li a {
+  text-align: left;
+}
+
+:host ::ng-deep #sidebar.active ul li a {
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+:host ::ng-deep #sidebar.active ul li a i {
+  margin-right: 0;
+  font-size: 0.85em;
+  margin-bottom: 5px;
+}
+
+/* Same dropdown links padding*/
+:host ::ng-deep #sidebar.active ul ul a {
+  padding: 10px !important;
+}
+
+/* Changing the arrow position to bottom center position, 
+   translateX(50%) works with right: 50% 
+   to accurately  center the arrow */
+:host ::ng-deep #sidebar.active .dropdown-toggle::after {
+  top: auto;
+  bottom: 10px;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+@media (max-width: 768px) {
+  /* 80px and its content aligned to centre. Pushing it off the screen with the
+       negative left margin
+    */
+  :host ::ng-deep #sidebar.active {
+    text-align: center;
+  }
+
+  /* Reappearing the sidebar on toggle button click */
+  :host ::ng-deep #sidebar {
+    margin-left: 0;
+    font-size: 0.85em;
+  }
+
+  /* Toggling the sidebar header content, 
+       hide the big heading [h3] and showing the small heading [strong] and vice versa
+    */
+  :host ::ng-deep #sidebar .sidebar-header strong {
+    display: none;
+  }
+  :host ::ng-deep #sidebar.active .sidebar-header h3 {
+    display: none;
+  }
+  :host ::ng-deep #sidebar.active .sidebar-header strong {
+    display: block;
+  }
+
+  /* Downsize the navigation links font size */
+  :host ::ng-deep #sidebar.active ul li a {
+    padding: 20px 10px;
+    font-size: 0.85em;
+  }
+
+  :host ::ng-deep #sidebar.active ul li a i {
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+
+  /* Adjust the dropdown links padding*/
+  :host ::ng-deep #sidebar.active ul ul a {
+    padding: 10px !important;
+  }
+
+  /* Changing the arrow position to bottom center position, 
+      translateX(50%) works with right: 50% 
+      to accurately  center the arrow */
+  :host ::ng-deep .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+}
+
+:host ::ng-deep p {
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+:host ::ng-deep a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+:host ::ng-deep #sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  background: #59717c;
+  transition: all 0.3s;
+  color: rgb(223, 237, 238);
+}
+
+:host ::ng-deep #sidebar .sidebar-header {
+  padding: 10px 0px;
+  background: #6f818a;
+  color: #fff;
+}
+
+:host ::ng-deep #sidebar ul.components {
+  padding: 20px 0;
+}
+
+:host ::ng-deep #sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+:host ::ng-deep #sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+:host ::ng-deep #sidebar ul li a:hover {
+  color: #4c6572;
+  background: #fff;
+}
+
+:host ::ng-deep #sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #4c6572;
+}
+:host ::ng-deep ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #4c6572;
+}
+
+:host ::ng-deep a {
+  cursor: pointer;
+}
