@@ -1,0 +1,6 @@
+.cont {
+  height: 80vh;
+}
+.custom-file-label::after {
+  content: "Trouver" !important;
+}

@@ -1,3 +1,4 @@
+import { AddItemModule } from './add-item/add-item.module';
 
 import { ItemService } from "./services/item.service";
 import { AngularFirestore } from "angularfire2/firestore";

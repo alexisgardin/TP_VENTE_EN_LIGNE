@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/firestore';
-import { Item } from '../model/item';
+import { Item } from '../model/ItemModel';
 
 const MOCKITEM = [new Item('Robe en viscose à motif',14.99,'./assets/images/Robes/robe1.jpeg',true, 'F', 'robe',['midi']),
 new Item('Robe à motif',24.99,'./assets/images/Robes/robe2.jpeg',true, 'F', 'robe',['midi']),

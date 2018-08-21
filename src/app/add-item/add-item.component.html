@@ -1,0 +1,37 @@
+<div class="cont row justify-content-center align-items-center align-content-center">
+  <form [formGroup]="itemForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="itemName">Nom de l'objet</label>
+      <input formControlName="name" type="text" class="form-control" id="itemName" aria-describedby="emailHelp" placeholder="Entrer nom d'objet">
+    </div>
+    <div class="form-group">
+      <label for="itemType">Types</label>
+      <select formControlName="type" class="form-control" id="itemType">
+        <option value="{{type.id}}" *ngFor='let type of this.typeService.types | async'>{{type.name}}</option>
+      </select>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="download">Photo</span>
+      </div>
+      <div class="custom-file">
+
+        <label class="custom-file-label" for="file">{{filename}}</label>
+        <input type="file" (change)="choosePhoto($event)" accept=".png, .jpeg, .jpg" class="custom-file-input" id="file" aria-describedby="download">
+      </div>
+    </div>
+
+    <label for="itemAttributes">Attributs</label>
+    <div formArrayName="attributes" id="itemAttributes" class="input-group mb-3 form-group">
+      <input [disabled]='inputDisabled' (change)='toArray($event)' type="text" value='' class="form-control" id="itemName" placeholder="Exemple : T-shirt, A motif, Coton">
+      <button (click)='disabled()' [ngClass]="{'btn-primary' : !inputDisabled, 'btn-danger' : inputDisabled}" class="input-group-append">
+        <i *ngIf='!inputDisabled' class="fa fa-check"></i>
+        <i *ngIf='inputDisabled' class="fas fa-times-circle"></i>
+      </button>
+    </div>
+    <span *ngFor='let badge of itemForm.controls.attributes.controls' class="ml-1 mr-1 badge badge-primary">{{badge.value}}</span>
+
+    <!-- <button type="submit" [disabled]="!myForm.valid">Submit</button> -->
+    <button type="button" (click)='test()'>Submit</button>
+  </form>
+</div>
